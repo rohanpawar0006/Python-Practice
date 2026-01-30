@@ -1,0 +1,5 @@
+x = int(input("Enter the days required for person 'A' to do the job: "))
+y = int(input("Enter the days required for person 'B' to do the job: "))
+z = int(input("Enter the days required for person 'C' to do the job: "))
+work_done = x*y*z/(x*y + y*z + z*x)
+print(f"The number of days required for three persons i.e, 'A','B','C': {work_done:.2f}days.")
