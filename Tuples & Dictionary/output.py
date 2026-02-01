@@ -1,0 +1,25 @@
+#(a)
+tuple1 = (23,1,45,67,45,9,55,45)
+tuple2 = (100,200)
+print(tuple1.index(45))
+print(tuple1.count(45))
+print(tuple1 + tuple2)
+print(len(tuple2))
+print(max(tuple1))
+print(min(tuple1))
+print(sum(tuple2))
+print(sorted(tuple1)) 
+print(tuple1)
+
+#(b)
+stateCapital = {"AndhraPradesh":"Hyderabad", "Bihar":"Patna","Maharashtra":"Mumbai",  
+                "Rajasthan":"Jaipur"}
+print(stateCapital.get("Bihar"))
+print(stateCapital.keys())
+print(stateCapital.values())
+print(stateCapital.items())
+print(len(stateCapital))
+print("Maharashtra" in stateCapital)
+print(stateCapital.get("Assam"))
+del stateCapital["Rajasthan"]
+print(stateCapital)
