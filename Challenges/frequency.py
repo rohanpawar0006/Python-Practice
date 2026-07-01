@@ -1,5 +1,5 @@
 """
-hallenge 3: Hashing Begins (VERY IMPORTANT FOR DSA)
+Challenge 3: Hashing Begins (VERY IMPORTANT FOR DSA)
 Problem: Frequency Counter
 Goal
 Write a program that:

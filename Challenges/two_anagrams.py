@@ -22,10 +22,8 @@ def are_anagrams(s1, s2):
     for i in range(len(s1)):
         counts1[s1[i]] = 1 + counts1.get(s1[i], 0)
         counts2[s2[i]] = 1 + counts2.get(s2[i], 0)
-    for i in counts1:
-        counts1[i] != counts2[i]
-        return False
-    return True
+        return counts1 == counts2
+
 s1 = input("Enter string1: ")
 s2 = input("Enter string2: ")
 print(are_anagrams(s1, s2))
