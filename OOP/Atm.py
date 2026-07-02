@@ -1,8 +1,8 @@
 class Atm:
     #constrcutor(special function)
     def __init__(self):
-        self.pin = ""
-        self.balance = 0
+        self.__pin = ""
+        self.__balance = 0
         self.menu()
         
     def menu(self):
@@ -30,46 +30,45 @@ class Atm:
             
     def create_pin(self):
         user_pin = input("Enter your pin: ")
-        self.pin = user_pin
+        self.__pin = user_pin
         
         user_balance = int(input("Enter your balance: "))
-        self.balance = user_balance
+        self.__balance = user_balance
         
         print("Pin Created Successfullty!")
         self.menu()
         
     def change_pin(self):
         old_pin = input("Enter your old pin")
-        if old_pin == self.pin:
+        if old_pin == self.__pin:
             new_pin = input("Enter new pin: ")
-            self.pin = new_pin
+            self.__pin = new_pin
             print("Pin Change Successfully!")
-            self.menu()
         else:
             print("Entered old pin is wrong :/")
         self.menu()
             
     def check_balance(self):
         user_pin = input("Enter your pin: ")
-        if user_pin == self.pin:
-            print("Your Current Balance: ", self.balance)
+        if user_pin == self.__pin:
+            print("Your Current Balance: ", self.__balance)
         else:
             print("You Entered Wrong Pin.")
-            self.menu()
+        self.menu()
     def withdraw(self):
         user_pin = input("Enter your pin: ")
-        if user_pin == self.pin:
+        if user_pin == self.__pin:
             amount = int(input("Enter the amount to withdrawal: "))
-            if amount <= self.balance:
-                self.balance -= amount
+            if amount <= self.__balance:
+                self.__balance -= amount
                 print("Withdrawal successful is: ", amount)
-                print("Balance: ", self.balance)
+                print("Balance: ", self.__balance)
             else:
                 print("Insufficient Balance!")
         else:
             print("Enter correct pin.")
         self.menu()
 obj = Atm()
-obj.menu
+obj.menu()
 
 
